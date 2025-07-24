@@ -23,7 +23,7 @@ logging.basicConfig(
 )
 
 # --- BOT CONFIGURATION ---
-TOKEN = "7999849691:AAFE7cMt2cyFMjZuQoXLObXfe58Ao1DMvvc"  # <-- Main Bot Token
+TOKEN = "8089409453:AAH-DjTRVY1H5kMp_ymE6ThYAl4zC4BGTwM"  # <-- Main Bot Token
 ADMIN_ID = 5978150981
 WEBHOOK_URL = "https://dominant-fidela-wwmahe-2264ea75.koyeb.app/" # Main Bot Webhook
 
@@ -2078,8 +2078,8 @@ def set_bot_commands():
         BotCommand("rate", "Change TTS speed"),
         BotCommand("language_stt", "Set language for STT"), # New command
         BotCommand("register_bot", "Create your own TTS/STT bot"), # New command
-        BotCommand("help", "❓ How to use the bot"),
-        BotCommand("privacy", "🔒 Read privacy notice"),
+        BotCommand("help", " How to use the bot"),
+        #BotCommand("privacy", "🔒 Read privacy notice"),
         BotCommand("status", "Bot stats")
     ]
     try:
