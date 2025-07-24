@@ -24,7 +24,7 @@ logging.basicConfig(
 
 # --- BOT CONFIGURATION ---
 # Replace with your NEW Bot's Token and Webhook URL
-TOKEN = "7999849691:AAHmRwZ_Ef1I64SZqotZND6v7LrE-fFwRD0"  # <-- your NEW bot token
+TOKEN = "7999849691:AAFE7cMt2cyFMjZuQoXLObXfe58Ao1DMnvc"  # <-- your NEW bot token
 ADMIN_ID = 5978150981  # <-- admin Telegram ID
 WEBHOOK_URL = "excellent-davida-wwmahe-45f63d30.koyeb.app/"  # <-- your Render URL (Make sure this is correct and unique for your NEW bot)
 
