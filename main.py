@@ -26,7 +26,7 @@ logging.basicConfig(
 # Replace with your NEW Bot's Token and Webhook URL
 TOKEN = "7999849691:AAHmRwZ_Ef1I64SZqotZND6v7LrE-fFwRD0"  # <-- your NEW bot token
 ADMIN_ID = 5978150981  # <-- admin Telegram ID
-WEBHOOK_URL = "https://spam-remover-bot-r3lv.onrender.com"  # <-- your Render URL (Make sure this is correct and unique for your NEW bot)
+WEBHOOK_URL = "excellent-davida-wwmahe-45f63d30.koyeb.app/"  # <-- your Render URL (Make sure this is correct and unique for your NEW bot)
 
 REQUIRED_CHANNEL = "@transcriber_bot_news_channel"  # <-- required subscription channel
 
