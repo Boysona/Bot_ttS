@@ -1442,7 +1442,7 @@ async def process_stt_media(chat_id: int, user_id_for_settings: str, message_typ
 
     processing_msg = None
     try:
-        processing_msg = target_bot.send_message(chat_id, "⏳ Processing your media for transcription...")
+        processing_msg = target_bot.send_message(chat_id, "Processing...")
 
         file_info = target_bot.get_file(file_id)
         if file_info.file_size > 20 * 1024 * 1024:
@@ -1771,13 +1771,13 @@ def child_webhook(child_bot_token):
                 chat_id = message.chat.id
                 # Handle /start for child bots
                 if message.text and message.text.startswith('/start'):
-                    welcome_message = f"👋 Welcome! I'm your dedicated {service_type.upper()} bot, powered by a larger framework. "
+                    welcome_message = f"👋 Welcome! I'm your dedicated {service_type.upper()} bot, powered by @Bot_makerrBot. "
                     if service_type == "tts":
                         current_voice = get_tts_user_voice_in_memory(user_id_for_settings) # Use user_id_for_settings
                         current_pitch = get_tts_user_pitch_in_memory(user_id_for_settings) # Use user_id_for_settings
                         current_rate = get_tts_user_rate_in_memory(user_id_for_settings)   # Use user_id_for_settings
                         welcome_message += (
-                            f"I convert your text to speech. Your current settings (managed through the main bot or here): "
+                            f"I convert your text to speech. Your current settings ): "
                             f"Voice: *{current_voice}*, Pitch: *{current_pitch}*, Speed: *{current_rate}*.\n\n"
                             "Just send me text to get started! Use `/voice`, `/pitch`, `/rate` to adjust."
                         )
