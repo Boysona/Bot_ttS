@@ -862,7 +862,7 @@ TTS_VOICES_BY_LANGUAGE = {
         "ur-PK-AsmaNeural", "ur-PK-FaizanNeural"
     ],
     "Nepali": [
-        "ne-NP-SaritaNeural", "ne-NP-AbhisekhNeural"
+        "ne-NP-HemkalaNeural", "ne-NP-SagarNeural"
     ],
     "Sinhala": [
         "si-LK-SameeraNeural", "si-LK-ThiliniNeural"
