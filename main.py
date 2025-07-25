@@ -1791,7 +1791,7 @@ def child_webhook(child_bot_token):
                             "• Send a voice, video, or audio file,\n"
                             "• I’ll transcribe it and send it back to you!\n"
                             "• Choose your media file language,\n"
-                            "• Or click /language_stt Powered by @Bot_BuilderrBot"
+                            "• Or click /language_stt Powered by @MediaToTextBot"
                         )
                     elif service_type == "tts":
                         welcome_message = (
@@ -1800,7 +1800,7 @@ def child_webhook(child_bot_token):
                             "• Then send it back to you!\n"
                             "• Choose your text language and avatar speaking type,\n"
                             "• Or click /voice\n"
-                            "• For more commands, go to the Menu Powered by @Bot_BuilderrBot"
+                            "• For more commands, go to the Menu Powered by @MediaToTextBot"
                         )
                     else:
                         welcome_message = f"👋 Welcome! I'm your dedicated {service_type.upper()} bot." # Fallback for unknown type
@@ -1903,10 +1903,10 @@ def set_bot_commands():
         BotCommand("pitch", "Change TTS pitch"),
         BotCommand("rate", "Change TTS speed"),
         BotCommand("language_stt", "Set language for STT"), # New command
-        BotCommand("register_bot", "Create your own TTS/STT bot"), # New command
+        BotCommand("register_bot", "Create your own bot"), # New command
         BotCommand("help", " How to use the bot"),
         #BotCommand("privacy", "🔒 Read privacy notice"),
-        BotCommand("status", "Bot stats")
+        #BotCommand("status", "Bot stats")
     ]
     try:
         bot.set_my_commands(commands)
