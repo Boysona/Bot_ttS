@@ -20,7 +20,7 @@ logging.basicConfig(
 )
 
 # --- BOT CONFIGURATION ---
-TOKEN = "7999849691:AAFE7cMt2cyFMjZuQoXLObXfe58Ao1DMnvc"  # <-- Main Bot Token
+TOKEN = "8089409453:AAHZZcFx-m-WggU2VNvV0i7t2A-FA_PUdxI"  # <-- Main Bot Token
 ADMIN_ID = 5978150981
 WEBHOOK_URL = "https://dominant-fidela-wwmahe-2264ea75.koyeb.app/" # Main Bot Webhook
 
