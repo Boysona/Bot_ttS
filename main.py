@@ -24,7 +24,7 @@ TOKEN = "7560825699:AAEzxr49ELI64Ndfy1hVMMcX6-DTV7CqXGA"  # <-- Main Bot Token
 ADMIN_ID = 5978150981
 WEBHOOK_URL = "https://dominant-fidela-wwmahe-2264ea75.koyeb.app/" # Main Bot Webhook
 
-REQUIRED_CHANNEL = "@transcriber_bot_news_channel"
+REQUIRED_CHANNEL = "@news_channals"
 
 bot = telebot.TeleBot(TOKEN, threaded=True) # Main Bot instance
 app = Flask(__name__)
