@@ -1343,7 +1343,7 @@ async def synth_and_send_tts(chat_id: int, user_id_for_settings: str, text: str,
 
     except Exception as e:
         logging.exception("TTS error")
-        target_bot.send_message(chat_id, "❌ Oops! An unexpected error occurred during text-to-speech conversion. Please try again in a moment.")
+        target_bot.send_message(chat_id, "⚠️ The file is too large, please send one that is 20MB or smaller.")
         processing_time = (datetime.now() - processing_start_time).total_seconds()
         add_processing_stat_in_memory({
             "user_id": user_id_for_settings, # Use the actual user's ID for stats
