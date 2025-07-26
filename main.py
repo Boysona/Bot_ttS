@@ -24,7 +24,7 @@ logging.basicConfig(
 # --- BOT CONFIGURATION ---
 TOKEN = "7790991731:AAFgEjc6fO-iTSSkpt3lEJBH86gQY5nIgAw"  # <-- Main Bot Token
 ADMIN_ID = 5978150981
-WEBHOOK_URL = "https://dominant-fidela-wwmahe-2264ea75.koyeb.app/" # Main Bot Webhook
+WEBHOOK_URL = "https://bot-tts-2d0g.onrender.com/" # Main Bot Webhook
 
 REQUIRED_CHANNEL = "@news_channals"
 
