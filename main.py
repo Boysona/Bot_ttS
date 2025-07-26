@@ -28,7 +28,7 @@ bot = telebot.TeleBot(TOKEN, threaded=True)
 app = Flask(__name__)
 
 # --- API KEYS ---
-ASSEMBLYAI_API_KEY = "6dab0a0669624f44afa50d679242e473"
+ASSEMBLYAI_API_KEY = "894ad2705ab54e33bb011a87b658ede2"
 
 # --- In-memory data storage ---
 in_memory_data = {
