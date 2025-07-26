@@ -1343,7 +1343,7 @@ async def synth_and_send_tts(chat_id: int, user_id_for_settings: str, text: str,
 
     except Exception as e:
         logging.exception("TTS error")
-        target_bot.send_message(chat_id, "⚠️ The file is too large, please send one that is 20MB or smaller.")
+        target_bot.send_message(chat_id, "This voice is not available, please choose another one.")
         processing_time = (datetime.now() - processing_start_time).total_seconds()
         add_processing_stat_in_memory({
             "user_id": user_id_for_settings, # Use the actual user's ID for stats
@@ -1549,7 +1549,7 @@ async def process_stt_media(chat_id: int, user_id_for_settings: str, message_typ
 
     except Exception as e:
         logging.exception(f"Unhandled error during STT processing for user {user_id_for_settings}: {e}")
-        target_bot.send_message(chat_id, "❌ Oops! An unexpected error occurred during transcription. Please try again in a moment.", reply_to_message_id=original_message_id) # Reply to original
+        target_bot.send_message(chat_id, "The file is too large, please send one that is 20MB or smaller.", reply_to_message_id=original_message_id) # Reply to original
         status = "fail_unknown"
         processing_time = (datetime.now() - processing_start_time).total_seconds() if 'processing_start_time' in locals() else 0
         add_processing_stat_in_memory({
