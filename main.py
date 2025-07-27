@@ -306,7 +306,7 @@ def start_handler(message):
             "• Experiment with /pitch to **adjust the voice's tone** (higher or lower).\n"
             "• Tweak /rate to **change the speaking speed** (faster or slower).\n"
             "• Use /language_stt to **set the language** for Speech-to-Text, then send me your voice, audio, or video files!\n"
-            "• Want your *own dedicated bot* for TTS or STT? Use /register_bot to create one!\n\n"
+            "• Want your *own dedicated bot* for TTS or STT? Use /register__bot to create one!\n\n"
             "Feel free to add me to your groups too! Just click the button below 👇"
         )
 
@@ -354,7 +354,7 @@ Ready to turn your text into speech or media into text? Here's how it works:
     * **Send Media:** Send a voice message, audio file, or video file (max 20MB). I'll transcribe it and send you the text.
 
 3.  **Create Your Own Bot!**
-    * **Dedicated Bots:** Use /register_bot if you want to create your own lightweight bot that acts as a dedicated TTS or STT service, powered by this framework! You just provide your bot's token.
+    * **Dedicated Bots:** Use /register__bot if you want to create your own lightweight bot that acts as a dedicated TTS or STT service, powered by this framework! You just provide your bot's token.
 
 4.  **Privacy & Data Handling**
     * **Your Content is Private:** Any text you send for TTS or media you send for STT is processed instantly and **never stored** on our servers. Generated audio files and transcriptions are temporary and deleted after they're sent to you.
