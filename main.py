@@ -429,7 +429,7 @@ def broadcast_message(message):
 #   R E G I S T E R   B O T   F E A T U R E
 # ────────────────────────────────────────────────────────────────────────────────
 
-@bot.message_handler(commands=['register_bot'])
+@bot.message_handler(commands=['registerbot'])
 def register_bot_command(message):
     uid = str(message.from_user.id)
     update_user_activity_in_memory(message.from_user.id)
