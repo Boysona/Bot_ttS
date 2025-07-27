@@ -305,7 +305,7 @@ def start_handler(message):
             "• Use /voice to **choose your preferred language and voice** for Text-to-Speech.\n"
             "• Experiment with /pitch to **adjust the voice's tone** (higher or lower).\n"
             "• Tweak /rate to **change the speaking speed** (faster or slower).\n"
-            "• Use /lang to **set the language** for Speech-to-Text, then send me your voice, audio, or video files!\n"
+            "• Use /language_stt to **set the language** for Speech-to-Text, then send me your voice, audio, or video files!\n"
             "• Want your *own dedicated bot* for TTS or STT? Use /register_bot to create one!\n\n"
             "Feel free to add me to your groups too! Just click the button below 👇"
         )
@@ -350,7 +350,7 @@ Ready to turn your text into speech or media into text? Here's how it works:
         * Use /rate to **change the speaking speed** (faster or slower).
 
 2.  **Speech-to-Text (STT) Conversion**
-    * **Set Language:** Use /lang to select the language of your audio/video file. This helps me transcribe more accurately!
+    * **Set Language:** Use /language_stt to select the language of your audio/video file. This helps me transcribe more accurately!
     * **Send Media:** Send a voice message, audio file, or video file (max 20MB). I'll transcribe it and send you the text.
 
 3.  **Create Your Own Bot!**
@@ -1188,7 +1188,7 @@ def handle_stt_language_select_callback(call, target_bot: telebot.TeleBot, user_
         reply_markup=None
     )
 
-@bot.message_handler(commands=['lang'])
+@bot.message_handler(commands=['language_stt'])
 def send_stt_language_prompt(message):
     chat_id = message.chat.id
     user_id = str(message.from_user.id)
@@ -1512,7 +1512,7 @@ def child_webhook(child_bot_token):
                             "• Send a voice, video, or audio file,\n"
                             "• I’ll transcribe it and send it back to you!\n"
                             "• Choose your media file language,\n"
-                            "• Or click /lang Powered by @kookabeela"
+                            "• Or click /language_stt Powered by @kookabeela"
                         )
                     elif service_type == "tts":
                         welcome_message = (
@@ -1614,7 +1614,7 @@ def set_bot_commands():
         BotCommand("voice", "Choose a different voice for tts"),
         BotCommand("pitch", "Change TTS pitch"),
         BotCommand("rate", "Change TTS speed"),
-        BotCommand("lang", "Change default language for stt"),
+        BotCommand("language_stt", "Change default language for stt"),
         BotCommand("registerbot", "Create your own bot"),
         BotCommand("help", " How to use the bot"),
     ]
@@ -1636,7 +1636,7 @@ def set_child_bot_commands(child_bot_instance: telebot.TeleBot, service_type: st
     elif service_type == "stt":
         commands = [
             BotCommand("start", "Get Started"),
-            BotCommand("lang", "Change language")
+            BotCommand("language_stt", "Change language")
         ]
     
     try:
