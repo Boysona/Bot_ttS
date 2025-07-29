@@ -266,7 +266,7 @@ def start_handler(message):
         # Somali: 👋 Sala {user_first_name}! Waxaan ahay Kadhig - kaaliyahaaga codka AI ee kaa caawinaya inaad u beddesho qoraalka cod ama codka qoraal - bilaash! 🔊✍️
         # English: 👋 Hello {user_first_name}! I am Kadhig - your AI voice assistant that helps you convert text to audio or audio to text - for free! 🔊✍️
         welcome_message = (
-            f"👋 Hello {user_first_name}! I am Kadhig - your AI voice assistant that helps you convert text to audio or audio to text - for free! 🔊✍️\n\n"
+            f"👋 Hello {user_first_name}! I am - your AI voice assistant that helps you convert text to audio or audio to text - for free! 🔊✍️\n\n"
             "✨ **Here's how to use it:**\n"
             "1. **Convert Text to Audio (TTS):**\n"
             "   - Choose the voice `/voice`\n"
@@ -612,9 +612,8 @@ def make_tts_voice_keyboard_for_language(lang_name: str):
     voices = TTS_VOICES_BY_LANGUAGE.get(lang_name, [])
     for voice in voices:
         markup.add(InlineKeyboardButton(voice, callback_data=f"tts_voice|{voice}"))
-    # Somali: ⬅️ Ku noqo Luqadaha
-    # English: ⬅️ Back to Languages
-    markup.add(InlineKeyboardButton("⬅️ Back to Languages", callback_data="tts_back_to_languages"))
+    
+    markup.add(InlineKeyboardButton("⬅️ Back", callback_data="tts_back_to_languages"))
     return markup
 
 def make_pitch_keyboard():
@@ -641,9 +640,7 @@ def handle_rate_command(message, target_bot: telebot.TeleBot, user_id_for_settin
     user_pitch_input_mode[user_id_for_settings] = None
     user_rate_input_mode[user_id_for_settings] = "awaiting_rate_input"
     user_register_bot_mode[user_id_for_settings] = None
-
-    # Somali: Sidee baan ugu hadlaa degdeg ama gaabis? Dooro mid ama soo dir nambar -100 (gaabis) ilaa +100 (degdeg), 0 waa caadi:
-    # English: How fast or slow should I speak? Choose one or send a number from -100 (slow) to +100 (fast), 0 is normal:
+   
     target_bot.send_message(
         chat_id,
         "How fast or slow should I speak? Choose one or send a number from -100 (slow) to +100 (fast), 0 is normal:",
@@ -661,8 +658,7 @@ def handle_rate_callback(call, target_bot: telebot.TeleBot, user_id_for_settings
         # Somali: Xawaaraha waa {rate_value}!
         # English: The rate is {rate_value}!
         target_bot.answer_callback_query(call.id, f"The rate is {rate_value}!")
-        # Somali: 🔊 Xawaaraha hadalka waa *{rate_value}*.\n\nDiyaar ma u tahay qoraal? Ama isticmaal `/voice` si aad u beddesho codka.
-        # English: 🔊 Speech rate is *{rate_value}*.\n\nReady for text? Or use `/voice` to change the voice.
+        
         target_bot.edit_message_text(
             chat_id=chat_id,
             message_id=call.message.message_id,
