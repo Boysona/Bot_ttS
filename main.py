@@ -407,8 +407,8 @@ def process_bot_token(message):
 
         markup = InlineKeyboardMarkup(row_width=2)
         markup.add(
-            InlineKeyboardButton("Qoraal u beddel Cod (TTS)", callback_data="register_bot_service|tts"),
-            InlineKeyboardButton("Cod u beddel Qoraal (STT)", callback_data="register_bot_service|stt")
+            InlineKeyboardButton("audio maker", callback_data="register_bot_service|tts"),
+            InlineKeyboardButton("transcriber", callback_data="register_bot_service|stt")
         )
         bot.send_message(message.chat.id,
                          f"Great! I have verified the token for @**{bot_info.username}**.\n\n"
