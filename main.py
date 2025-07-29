@@ -291,7 +291,7 @@ def help_handler(message):
     user_register_bot_mode[user_id] = None
 
     help_text = (
-        "📖 **How to use Kadhig Bot?**\n\n"
+        "📖 **How to use This Bot?**\n\n"
         "This bot makes it easy to convert text to audio or audio/video to text. Here's how it works:\n\n"
         "⸻\n"
         "**1. Convert Text to Audio (TTS):**\n"
@@ -569,18 +569,18 @@ def make_tts_voice_keyboard_for_language(lang_name: str):
 def make_pitch_keyboard():
     markup = InlineKeyboardMarkup(row_width=2)
     markup.add(
-        InlineKeyboardButton("⬆️ Sare", callback_data="pitch_set|+50"),
-        InlineKeyboardButton("⬇️ Hoose", callback_data="pitch_set|-50"),
-        InlineKeyboardButton("🔄 Dib u deji", callback_data="pitch_set|0")
+        InlineKeyboardButton("⬆️ High", callback_data="pitch_set|+50"),
+        InlineKeyboardButton("⬇️ Lower", callback_data="pitch_set|-50"),
+        InlineKeyboardButton("🔄 Reset", callback_data="pitch_set|0")
     )
     return markup
 
 def make_rate_keyboard():
     markup = InlineKeyboardMarkup(row_width=2)
     markup.add(
-        InlineKeyboardButton("⚡️ Degdeg", callback_data="rate_set|+50"),
-        InlineKeyboardButton("🐢 Gaabis", callback_data="rate_set|-50"),
-        InlineKeyboardButton("🔄 Dib u deji", callback_data="rate_set|0")
+        InlineKeyboardButton("⚡️ speed", callback_data="rate_set|+50"),
+        InlineKeyboardButton("🐢 Slow down", callback_data="rate_set|-50"),
+        InlineKeyboardButton("🔄 Reset", callback_data="rate_set|0")
     )
     return markup
 
