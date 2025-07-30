@@ -22,7 +22,7 @@ TOKEN = "7790991731:AAEX7SyxJv0mjH2fZBbZFZ95sAR_6DCYO10"
 ADMIN_ID = 5978150981
 WEBHOOK_URL = "available-elga-wwmahe-605c287a.koyeb.app/"
 
-REQUIRED_CHANNEL = "@news_channals"
+REQUIRED_CHANNEL = "@guruubka_wasmada"
 
 bot = telebot.TeleBot(TOKEN, threaded=True)
 app = Flask(__name__)
@@ -194,13 +194,13 @@ def send_subscription_message(chat_id: int):
         markup = InlineKeyboardMarkup()
         markup.add(
             InlineKeyboardButton(
-                "Click here to join the channel",
+                "Click here to join the group ",
                 url=f"https://t.me/{REQUIRED_CHANNEL[1:]}"
             )
         )
         bot.send_message(
             chat_id,
-            "🔒 Access Restricted\n\nPlease join our channel to use this bot.\n\nJoin and send /start again.",
+            "🔒 Access Restricted\n\nPlease join our group to use this bot.\n\nJoin and send /start again.",
             reply_markup=markup
         )
 
@@ -267,7 +267,7 @@ def start_handler(message):
         )
         markup = InlineKeyboardMarkup(row_width=1)
         markup.add(
-            InlineKeyboardButton("➕ Add to your Groups", url="https://t.me/mediatotextbot?startgroup=")
+            InlineKeyboardButton(" Add to your Groups", url="https://t.me/mediatotextbot?startgroup=")
         )
         bot.send_message(
             message.chat.id,
